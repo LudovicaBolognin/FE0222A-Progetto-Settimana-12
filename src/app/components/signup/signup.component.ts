@@ -20,7 +20,7 @@ export class SignupComponent implements OnInit {
       await this.srvAuth.registration(form.value).toPromise();
       this.router.navigate(['/login'])
     } catch (error) {
-      console.log('error');
+      alert('Utente già esistente!');
     }
   }
 

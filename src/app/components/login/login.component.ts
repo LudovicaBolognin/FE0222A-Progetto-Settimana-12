@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
       await this.srvAuth.login(form.value).toPromise();
       this.router.navigate(["/"])
     } catch (err) {
-      console.log("err");
+      alert("Utente inesistente!");
     }
   }
 

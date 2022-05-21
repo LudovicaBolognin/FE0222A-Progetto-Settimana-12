@@ -11,11 +11,11 @@
 
   <mat-sidenav-content>
     <mat-toolbar color="primary">
-      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="handset$ | async"><mat-icon aria-label="Side nav toggle icon">X</mat-icon></button>
+      <!-- <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="handset$ | async"><mat-icon aria-label="Side nav toggle icon">X</mat-icon></button> -->
       <span *ngIf="user$|async as user">Ciao, {{user.user.name}}!</span>
       <span class="example-sidenav-content">
 
-        <button style="margin-left: 10px" type="button" mat-raised-button color="accent" mat-button (click)="drawer.toggle()">Naviga</button>
+        <button style="margin-left: 10px" type="button" mat-raised-button color="accent" mat-button (click)="drawer.toggle()">Visualizza Menu</button>
 
       </span>
 
