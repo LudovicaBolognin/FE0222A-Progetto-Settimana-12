@@ -7,9 +7,11 @@ import { MoviesComponent } from './components/movies/movies.component';
 import { ProfileComponent } from './components/profile/profile.component';
 //import { DashboardComponent } from './components/dashboard/dashboard.component';
 //import { NavbarComponent } from './components/navbar/navbar.component';
-import { LoginComponent } from './components/login/login.component';
-import { SignupComponent } from './components/signup/signup.component';
+/* import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component'; */
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthModule } from './auth/auth.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ProfileComponent,
     //DashboardComponent,
     //NavbarComponent,
-    LoginComponent,
-    SignupComponent
+/*     LoginComponent,
+    SignupComponent */
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AuthModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,71 @@
-<p>signup works!</p>
+<!-- <p>signup works!</p>
+ -->
+ <form #form="ngForm" (ngSubmit)="login(form)" >
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Login</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div fxLayout>
+        <div>
+          <mat-form-field class="full-width">
+            <input
+              matInput
+              placeholder="Nome"
+              type="text"
+              #name="ngModel"
+              ngModel
+              name="name"
+              required
+            />
+            <mat-error *ngIf="name.invalid">
+              Nome <strong>Obbligatorio</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div fxLayout>
+        <div>
+          <mat-form-field class="full-width">
+            <input
+              matInput
+              placeholder="Email"
+              type="email"
+              #email="ngModel"
+              ngModel
+              name="email"
+              required
+            />
+            <mat-error *ngIf="email.invalid">
+              Email <strong>Obbligatoria</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div fxLayout>
+        <div>
+          <mat-form-field class="full-width">
+            <input
+              matInput
+              type="password"
+              #password="ngModel"
+              placeholder="Password"
+              ngModel
+              name="password"
+              required
+            />
+            <mat-error *ngIf="password.invalid">
+              Password <strong>Obbligatoria</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit" >Registrati</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
+<div fxLayout>
+  oppure vai a <a [routerLink]="['/login']"   style="color: white;">Login</a>
+</div>

@@ -48,7 +48,7 @@ registration(data: {name: string; email: string; password: string}) {
   );
 };
 
-restore() {
+restore() { //mantenere utente in localstorage
   const userJ = localStorage.getItem('user');
   if(!userJ) {
     return

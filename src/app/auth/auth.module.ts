@@ -7,6 +7,16 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Token } from '@angular/compiler';
 import { TokenInterceptor } from './token.interceptor';
 
+//importa material per login e signup
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
+//npm i @angular/flex-layout
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+
 //gestirà auth-module login e signup
 
 const routes: Routes = [
@@ -27,7 +37,13 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes), //forRoots(routes)
+    MatCardModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatInputModule,
+    MatButtonModule,
+    FlexLayoutModule
   ],
   // inserire interceptor
   providers: [
