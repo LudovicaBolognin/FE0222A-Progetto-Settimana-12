@@ -15,7 +15,7 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  async login(form: NgForm) {
+  async signup(form: NgForm) {
     try {
       await this.srvAuth.registration(form.value).toPromise();
       this.router.navigate(['/login'])

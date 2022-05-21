@@ -11,6 +11,12 @@
       "password": "$2a$10$6VXq/2H4zuC/e0b9.pEypuD7PhDAtruYe1VQtq16dGxgIcjHYyKyi",
       "name": "Aquamarine",
       "id": 2
+    },
+    {
+      "email": "bebu@a.b",
+      "password": "$2a$10$/kGHjl3gRcEv.pF5cs/yx.qoENm8IM2fFIsJCEH2Gfihix4TgzCuy",
+      "name": "Ludovica",
+      "id": 3
     }
   ],
   "favorites": [
@@ -43,6 +49,16 @@
       "userId": 2,
       "movieId": 567189,
       "id": 10
+    },
+    {
+      "userId": 3,
+      "movieId": 717192,
+      "id": 11
+    },
+    {
+      "userId": 3,
+      "movieId": 813258,
+      "id": 12
     }
   ],
   "genres": [

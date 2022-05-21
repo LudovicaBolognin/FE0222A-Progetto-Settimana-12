@@ -1,1 +1,17 @@
-<p>profile works!</p>
+<!-- <p>profile works!</p> -->
+<mat-tab-group>
+  <mat-tab label="Info Utente">
+    <h3>I tuoi Dati</h3>
+  <div class="info" *ngIf="users$|async as user">
+    <p><span class="info-label">Nome:</span> {{user.user.name}}</p>
+    <p><span class="info-label">Email:</span> {{user.user.email}}</p>
+  </div>
+
+  <h3>I tuoi Film Preferiti</h3>
+  <div class="info" *ngFor="let m of movies">
+    <ul *ngIf="m.favId">
+      <li>{{m.data.title}}</li>
+    </ul>
+  </div>
+  </mat-tab>
+</mat-tab-group>
