@@ -10,16 +10,9 @@
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
-
-      <span *ngIf="user$|async as user">Ciao, {{user.user.name}}!</span>
-      <span class="example-sidenav-content">
-
-        <button style="margin-left: 10px" type="button" mat-raised-button color="accent" mat-button (click)="drawer.toggle()">Visualizza Menu</button>
-
-      </span>
-
-    </mat-toolbar>
+    <mat-toolbar color="primary"><p *ngIf="user$|async as user">Ciao, {{user.user.name}}!</p></mat-toolbar>
     <ng-content ></ng-content>
   </mat-sidenav-content>
 </mat-sidenav-container>
+
+<button type="button" mat-raised-button color="accent" mat-button (click)="drawer.toggle()">Visualizza Menu</button>

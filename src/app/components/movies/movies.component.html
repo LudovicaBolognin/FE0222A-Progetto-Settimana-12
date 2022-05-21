@@ -1,9 +1,8 @@
 <!-- <p>movies works!</p>
 link per le immagini: https://image.tmdb.org/t/p/w500 senza slash che c'è già nel db-->
-<div class="grid-container">
-  <div fxLayout="row wrap" fxLayoutGap="5px grid">
-    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="30%" *ngFor="let movie of movies; let i = index">
-      <mat-card>
+<div class="container">
+      <mat-card *ngFor="let movie of movies; let i = index">
+        <mat-card-subtitle><b>Data d'uscita:</b> {{movie.data.release_date}}</mat-card-subtitle>
         <img mat-card-image [src]="'https://image.tmdb.org/t/p/w500' + movie.data.poster_path"
           alt="Poster di {{movie.data.title}}">
         <mat-card-content>
@@ -12,6 +11,4 @@ link per le immagini: https://image.tmdb.org/t/p/w500 senza slash che c'è già 
           </button>
         </mat-card-content>
       </mat-card>
-    </div>
-  </div>
 </div>

@@ -16,7 +16,7 @@ export class MoviesComponent implements OnInit {
     this.movies = await this.srvMovies.getMoviesPop();
   }
 
-  //aggiungi e rimuovi fav
+  //aggiungi e rimuovi
   //se id del movie ? allora rimuovi movie fav : oppure aggiungi movie fav
   async addFavMovies(idMovie: number, index: number) {
     this.movies[index].favIsLoading = true;
