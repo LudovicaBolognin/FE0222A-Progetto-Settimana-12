@@ -8,7 +8,7 @@ import { take } from 'rxjs';
 export interface TotMovie {
   data: Movies;
   favId?: number; // o undefined
-  favIsLoading: boolean;
+  loadFavorite: boolean;
 }
 
 @Injectable({
@@ -27,7 +27,7 @@ export class MoviesService {
     const favorites = await this.http.get<Favourites[]>(`${this.moviesUrl}/favorites?userId=${users.user.id}`).toPromise();
     return movies!.map((m) => ({
       data: m,
-      favIsLoading: false,
+      loadFavorite: false,
       favId: favorites!.find((f) => f.movieId == m.id)?.id,
     }));
   };

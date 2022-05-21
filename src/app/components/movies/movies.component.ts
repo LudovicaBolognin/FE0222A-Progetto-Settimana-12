@@ -19,16 +19,16 @@ export class MoviesComponent implements OnInit {
   //aggiungi e rimuovi
   //se id del movie ? allora rimuovi movie fav : oppure aggiungi movie fav
   async addFavMovies(idMovie: number, index: number) {
-    this.movies[index].favIsLoading = true;
+    this.movies[index].loadFavorite = true;
       const myFavorite = await (await this.srvMovies.addFav(idMovie)).toPromise(); //promise
       // modifica array con favorito
       this.movies[index] = { ...this.movies[index], favId: myFavorite!.id }
   }; //c'è un bug nell'aggiunta dei favorites: alle volte rimane disabilitato (vedi html), ma viene segnato ugualmente tra i favoriti dell'utente
 
   async removeFavMovie(idMovie: number, index: number) {
-    this.movies[index].favIsLoading = true;
+    this.movies[index].loadFavorite = true;
       await this.srvMovies.removeFav(idMovie).toPromise();
-      this.movies[index].favIsLoading = false;
+      this.movies[index].loadFavorite = false;
       this.movies[index] = { ...this.movies[index], favId: undefined }
   };
 
