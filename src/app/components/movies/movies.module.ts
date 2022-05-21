@@ -8,8 +8,6 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 
-import { FlexLayoutModule } from '@angular/flex-layout';
-
 const routes: Routes = [
   {
     path: "",
@@ -26,8 +24,7 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     MatCardModule,
     MatIconModule,
-    MatButtonModule,
-    FlexLayoutModule
+    MatButtonModule
   ],
   exports: [
     RouterModule

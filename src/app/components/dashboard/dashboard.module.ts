@@ -13,7 +13,6 @@ import { MatListModule } from "@angular/material/list";
 //ricordati icone
 import { MatIconModule } from "@angular/material/icon";
 
-// redirect to login and lazy-loading
 const routes: Routes = [
   {
     path: "",
